@@ -117,12 +117,6 @@ SVM_model = function(feature_genes,training_df = subset_train_df,model_kernel = 
   ## calculate average pcorrect for the model using across validation
   ave_pcorrect = mean(as.vector(as.numeric(pcorrect)))
   
-  ## Calculate the accuracy of test df
-  #subset_test_df = test_df[,which(colnames(test_df) %in% feature_genes)]
-  
-  #predict_test = predict(svm_model[[index[1]]],as.data.frame(subset_test_df))
-  #accuracy_test = length(which(predict_test == test_df$Label))/length(test_df$Label) * 100
-
   return(list(svm_model,pcorrect,ave_pcorrect))
 }
 
