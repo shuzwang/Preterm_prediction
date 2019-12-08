@@ -71,7 +71,6 @@ subset_train_df$Label = as.factor(subset_train_df$Label)
 
 SVM_model = function(feature_genes,training_df = subset_train_df,model_kernel = c("linear","polynomial","radial"),gamma = 0.01,validation_proportion = 0.2,set_seed = 100){
   library(e1071)
-  #library(caret)
   library(dismo)
   
   set.seed(set_seed)
